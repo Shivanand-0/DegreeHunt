@@ -11,9 +11,9 @@ let nameIp=document.querySelector('#name-ip');
 
 let lst=document.querySelector('#result');
 let heading=document.querySelector('#c-name');
-let country;
-let keyword;
-let college;
+let country="";
+let keyword="";
+let college="";
 
 
 let getKeyword=()=>{
@@ -53,13 +53,14 @@ let getName=()=>{
 
 let getCollegeList=async ()=>{
     
-    if(keyword){
+    if(keyword!=""){
         try{
             console.log("in keyword section", keyword)
             let res=await axios.get(proxyUrl+url+keyword);
             console.log(res)
             if(res && res.data.length==0){
                 heading.innerText=`SORRY! Data is not availible for this keyword.`
+                keyword=""
                 return;
             }
             for(let col of res.data){
@@ -73,20 +74,23 @@ let getCollegeList=async ()=>{
             }
             if(lst.innerText==""){
                heading.innerText=`SORRY! Data is not availible for this keyword.`
+               keyword=""
                 return; 
             }
+            keyword=""
         }catch(e){
             heading.innerText=`Get Error While Fetching Data`;
             console.log('error: ',e );
         }
     }
-    else if(country){
+    else if(country!=""){
         try{
             console.log("in country section", country)
             let res=await axios.get(proxyUrl+url+country);
             console.log(res.data)
             if(res && res.data.length==0){
                 heading.innerText=`SORRY! Data is not availible for this country name.`
+                country="";
                 return;
             }
             for(let col of res.data){
@@ -102,20 +106,23 @@ let getCollegeList=async ()=>{
             }
             if(lst.innerText==""){
                heading.innerText=`SORRY! Data is not availible for this country name.`
+               country="";
                 return; 
             }
+            country="";
         }catch(e){
             heading.innerText=`Get Error While Fetching Data`;
             console.log('error: ',e );
         }
     }
-    else if(college){
+    else if(college!=""){
         try{
             console.log("in college section", college)
             let res=await axios.get(proxyUrl+url+college);
             console.log(res.data)
             if(res && res.data.length==0){
                 heading.innerText=`SORRY! Data is not availible for this college name.`
+                college=""
                 return;
             }
             for(let col of res.data){
@@ -131,8 +138,10 @@ let getCollegeList=async ()=>{
             }
             if(lst.innerText==""){
                heading.innerText=`SORRY! Data is not availible for this college name.`
+               college=""
                 return; 
             }
+            college=""
         }catch(e){
             heading.innerText=`Get Error While Fetching Data`;
             console.log('error: ',e );
@@ -144,13 +153,13 @@ let getCollegeList=async ()=>{
 
 keywordBtn.addEventListener('click',()=>{
     lst.innerText="";
-    heading.innerText=""
+    heading.innerText="";
     getKeyword()
     getCollegeList()
 })
 countryBtn.addEventListener('click',()=>{
     lst.innerText="";
-    heading.innerText=""
+    heading.innerText="";
     getCountry()
     getCollegeList()
 })
