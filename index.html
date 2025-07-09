@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DegreeHunt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+
+    <!-- navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid nav-bar ">
+            <a class="navbar-brand fs-1" href="#">DegreeHunt</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item ms-3">
+                        <a class="nav-link active fs-5" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link fs-5" href="#keyword-search">Search By Keyword</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link fs-5" href="#country-search">Search By Country</a>
+                    </li>
+                    <li class="nav-item ms-3 me-5">
+                        <a class="nav-link fs-5" href="#name-search">Search By College Name</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--  -->
+    <!-- home -->
+    <div class="home" id="home">
+        <div class="contant-text">
+            <h2>DegreeHunt</h2>
+            <h4>Find Your Perfect University</h4>
+        </div>
+        <div class="contant-image">
+        </div>
+    </div>
+    <!--  -->
+    <!-- search by keyword -->
+    <div class="keyword" id="keyword-search">
+        <div class="college1"></div>
+        <div class="container">
+            <h4>Find College or University <br>By Keyword</h4>
+            <div class="finder-container">
+                <div class="mb-3 input-item">
+                    <input type="text" id="keyword-ip" class="form-control w-100 p-3 mb-3" id="keyword-input"
+                        placeholder="Enter Keyword">
+                    <a href="#lst-container"><button type="button" class="btn btn-primary mt-3"
+                            id="keyword-btn">Search</button></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <!-- search by country -->
+    <div class="country" id="country-search">
+        <div class="college2"></div>
+        <div class="container">
+            <h4>Find College or University <br>By Country Name</h4>
+            <div class="finder-container">
+                <div class="mb-3 input-item">
+                    <input type="text" id="country-ip" class="form-control w-100 p-3 mb-3" id="country-input"
+                        placeholder="Enter Country Name">
+                    <a href="#lst-container"><button type="button" class="btn btn-primary mt-3"
+                            id="country-btn">Search</button></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <!-- search by name -->
+    <div class="keyword" id="name-search">
+        <div class="college3"></div>
+        <div class="container">
+            <h4>Find College or University <br>By College Name</h4>
+            <div class="finder-container">
+                <div class="mb-3 input-item">
+                    <input type="text" id="name-ip" class="form-control w-100 p-3 mb-3" id="neme-input"
+                        placeholder="Enter college Name( eg: college full name, city name)">
+                    <a href="#lst-container"><button type="button" class="btn btn-primary mt-3"
+                            id="name-btn">Search</button></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <!-- result -->
+    <div id="lst-container">
+        <h3 id="c-name"></h3>
+        <ul id="result">
+        </ul>
+    </div>
+    <!--  -->
+    <!-- footer -->
+    <footer>
+        <p>Made By <span><b>Svont</b></span></p>
+    
+    </footer>
+    <!--  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

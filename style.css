@@ -1,0 +1,158 @@
+
+/* nav bar */
+.nav-bar{
+    background-color: #658cc244;
+    height: 90px;
+}
+
+/* home page */
+.home{
+    /* margin-top: 102px; */
+    /* border:2px solid rgb(201, 140, 10); */
+    height:62rem;
+    display: flex;
+    background: #7da1f0;
+background: linear-gradient(0deg,rgba(125, 161, 240, 1) 0%, rgba(247, 247, 247, 1) 100%);
+
+}
+.contant-text{
+    position: relative;
+    top: 21rem;
+    left:5rem;
+    height: 20rem;
+    text-align: center;
+    
+
+}
+.contant-text h2{
+    font-size: 130px;
+    line-height: 200px;
+    font-family:sans-serif;
+}
+.contant-image{
+    border:2px solid #658cc2d2;
+    border-radius: 50px;
+    box-shadow: 5px 5px 20px #658cc2c5;
+    height: 45rem;
+    width: 50rem;
+    display: flex;
+    background-image: url(resource/college\ search2.jpg);
+    background-size: cover;
+    position: relative;
+    top: 11rem;
+    left: 15rem;
+}
+
+
+
+
+
+/* keyword search page */
+
+.keyword{
+    /* border:2px solid rgb(201, 39, 10); */
+    height:60rem;
+    background: #7fcceb;
+    background: linear-gradient(1deg,rgba(127, 204, 235, 1) 0%, rgba(211, 228, 242, 1) 50%, rgb(125, 161, 240) 100%);
+}
+.college1{
+    border:2px solid rgb(60, 42, 221);
+    border-radius: 20px;
+    height:20rem;
+    width: 90rem;
+    background-image: url(resource/college1.jpg);
+    background-size:cover;
+    position:relative;
+    left:15rem;
+}
+
+.container{
+    /* border: 2px solid black; */
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h4{
+    font-size: 60px;
+    text-align: center;
+}
+.finder-container{
+    /* border: 2px solid black; */
+    display: flex;
+    width: 25rem;
+    height: 15rem;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+.input-item{
+    
+    display: flex;
+    flex-direction: column;
+
+}
+.input-item a{
+    display: flex;
+    justify-content: center;
+}
+.input-item a button{
+    width: 100%;
+}
+
+
+/*search by country page*/
+.country{
+    /* border:2px solid rgb(201, 39, 10); */
+    height:60rem;
+    background: #7fcceb;
+    background: linear-gradient(1deg, rgb(125, 161, 240) 0% , rgba(211, 228, 242, 1) 50%, rgba(127, 204, 235, 1) 100%);
+}
+.college2{
+    border:2px solid rgb(101, 217, 233);
+    border-radius: 20px;
+    height:20rem;
+    width: 90rem;
+    background-image: url(resource/college3.jpg);
+    background-size:cover;
+    position:relative;
+    left:15rem;
+}
+
+
+/* keyword search page */
+
+.name{
+    /* border:2px solid rgb(201, 39, 10); */
+    height:60rem;
+    background: #7fcceb;
+    background: linear-gradient(1deg,rgba(127, 204, 235, 1) 0%, rgba(211, 228, 242, 1) 50%, rgb(125, 161, 240) 100%);
+}
+.college3{
+    border:2px solid rgb(60, 42, 221);
+    border-radius: 20px;
+    height:20rem;
+    width: 90rem;
+    background-image: url(resource/college2.jpg);
+    background-size:cover;
+    position:relative;
+    left:15rem;
+}
+
+
+/* result */
+#lst-container{
+background: #7fcceb;
+background: linear-gradient(1deg, rgb(125, 161, 240) 0% , rgba(211, 228, 242, 1) 50%, rgba(127, 204, 235, 1) 100%);
+min-height: 10rem;
+height: auto;
+padding-left: 4rem;
+}
+/* footer */
+footer{
+    background-color: #658cc244;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
