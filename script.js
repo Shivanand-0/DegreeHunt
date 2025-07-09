@@ -1,3 +1,4 @@
+const proxyUrl = "https://cors-anywhere.herokuapp.com/";
 let url='http://universities.hipolabs.com/search?name=';
 
 let keywordBtn=document.querySelector('#keyword-btn');
@@ -55,7 +56,7 @@ let getCollegeList=async ()=>{
     if(keyword){
         try{
             console.log("in keyword section", keyword)
-            let res=await axios.get(url+keyword);
+            let res=await axios.get(proxyUrl+url+keyword);
             console.log(res)
             if(res && res.data.length==0){
                 heading.innerText=`SORRY! Data is not availible for this keyword.`
@@ -82,7 +83,7 @@ let getCollegeList=async ()=>{
     else if(country){
         try{
             console.log("in country section", country)
-            let res=await axios.get(url+country);
+            let res=await axios.get(proxyUrl+url+country);
             console.log(res.data)
             if(res && res.data.length==0){
                 heading.innerText=`SORRY! Data is not availible for this country name.`
@@ -111,7 +112,7 @@ let getCollegeList=async ()=>{
     else if(college){
         try{
             console.log("in college section", college)
-            let res=await axios.get(url+college);
+            let res=await axios.get(proxyUrl+url+college);
             console.log(res.data)
             if(res && res.data.length==0){
                 heading.innerText=`SORRY! Data is not availible for this college name.`
