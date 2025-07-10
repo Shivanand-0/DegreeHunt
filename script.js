@@ -1,4 +1,4 @@
-const proxyUrl = "https://https-proxy-y7p3.onrender.com";
+const proxyUrl = "https://https-proxy-y7p3.onrender.com/";
 let url='http://universities.hipolabs.com/search?name=';
 
 let keywordBtn=document.querySelector('#keyword-btn');
